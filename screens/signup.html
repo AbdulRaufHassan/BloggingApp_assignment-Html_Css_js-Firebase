@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogging App</title>
+    <link rel="stylesheet" href="../css-files/login-signup.css">
+</head>
+
+<body>
+    <div id="login-signup-body">
+        <header>
+            <div class="hdrTopDiv">
+                <h1>Personal Blogging App</h1><a href="login.html">Login</a>
+            </div>
+            <h1>Signup</h1>
+        </header>
+        <div class="container">
+            <form class="login-signup-Form" id="signupForm">
+                <div> <input type="text" class="inputField" id="firstNameInput" placeholder="First Name" maxlength="20">
+                    <input type="text" class="inputField" id="lastNameInput" placeholder="Last Name" maxlength="20">
+                    <input type="text" class="inputField" id="signupEmailInput" placeholder="Email">
+                    <input type="password" class="inputField" id="passwordInput" placeholder="Password">
+                    <input type="password" class="inputField" id="confirmPasswordInput" placeholder="Repeat password">
+                    <button type="submit">Signup</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="login-signup-loader">
+        <span id="loader"></span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../js-files/firebase-config.js" type="module"></script>
+    <script src="../js-files/checkUserAuth.js" type="module"></script>
+    <script src="../js-files/signup.js" type="module"></script>
+</body>
+
+</html>

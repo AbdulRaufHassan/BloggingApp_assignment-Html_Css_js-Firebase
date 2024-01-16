@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogging App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css-files/dashboard.css">
+</head>
+
+<body>
+  <div id="other-pages-body">
+    <header>
+      <div class="hdrTopDiv">
+        <h1>Personal Blogging App</h1>
+        <div><a href="../index.html">All blogs</a><a href="profilePage.html" id="userName"></a><a
+            id="logoutBtn">Logout</a></div>
+      </div>
+      <h1 class="headrTitle">Dashboard</h1>
+    </header>
+    <div class="custom-container">
+      <div class="blogPostDiv">
+        <input type="text" placeholder="Enter your blog tite" id="blogTitleInput" maxlength="50">
+        <textarea placeholder="What is in your mind" id="blogDiscriptionInput" maxlength="3000"></textarea>
+        <button id="addBlogBtn">Publish blog</button>
+      </div>
+      <div id="blog_main_container">
+        <h1>My Blogs</h1>
+        <div id="blogsParentDiv">
+        </div>
+      </div>
+      <div id="blogsLoad_loader">
+        <span id="loader"></span>
+      </div>
+    </div>
+  </div>
+  <div id="other-pages-loader">
+    <span id="loader"></span>
+  </div>
+  <!-- edit blog modal -->
+  <div class="modal fade" id="editBlogModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Blog</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <input type="text" id="editBlogTitleInput" placeholder="Edit your blog title">
+          <textarea id="editBlogDiscriptionInput" placeholder="Edit your blog discription"></textarea>
+        </div>
+        <div class="modal-footer">
+          <button type="button" id="editBlogModalCloseBtn" class="btn btn-secondary"
+            data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" id="saveEditChangesBtn">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="../js-files/firebase-config.js" type="module"></script>
+  <script src="../js-files/checkUserAuth.js" type="module"></script>
+  <script src="../js-files/dashboard.js" type="module"></script>
+</body>
+
+</html>

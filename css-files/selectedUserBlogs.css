@@ -1,0 +1,310 @@
+@font-face {
+    font-family: 'inter';
+    src: url('../fonts/inter-font.ttf');
+}
+
+@font-face {
+    font-family: 'montserrat';
+    src: url('../fonts/Montserrat-font.ttf');
+}
+
+@font-face {
+    font-family: 'roboto';
+    src: url('../fonts/Roboto-font.ttf');
+}
+
+@keyframes rotation {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+#loader_parentDiv {
+    height: calc(100vh - 129px);
+    width: 100%;
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#loader {
+    width: 68px;
+    height: 68px;
+    border: 7px solid rgba(119, 73, 248, 1);
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    box-sizing: border-box;
+    animation: rotation 1s linear infinite;
+}
+
+body {
+    min-height: 100vh;
+    max-height: fit-content;
+    min-width: 550px;
+    max-width: 1600px;
+    margin: 0px auto;
+    padding: 0;
+    background: #f8f9fa;
+    position: relative;
+}
+
+header {
+    height: auto;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(222, 226, 230, 1);
+    box-sizing: border-box;
+}
+
+.hdrTopDiv {
+    width: 100%;
+    height: 47px;
+    background: rgba(119, 73, 248, 1);
+    padding: 0px 10% 0px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.hdrTopDiv h1 {
+    margin: 0;
+    font-size: 25px;
+    font-family: 'inter', sans-serif;
+    color: #ffffff;
+}
+
+.hdrTopDiv .loginBtnStyle,
+.hdrTopDiv .logoutBtnStyle {
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 700;
+    font-family: 'inter', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+header>a {
+    font-family: 'inter', sans-serif;
+    font-weight: 700;
+    font-size: 40px;
+    color: rgba(119, 73, 248, 1);
+    text-decoration: none;
+    margin: 18px 0px 14px 10%;
+    display: inline-block;
+}
+
+.hdrTopDiv .dashboardBtnStyle,
+.hdrTopDiv .profileBtnStyle {
+    margin-right: 40px;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 400;
+    font-family: 'inter', sans-serif;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#custom-container {
+    min-height: 100vh;
+    max-height: fit-content;
+    width: 100%;
+    position: relative;
+    padding: 25px 0px 0px 10%;
+    box-sizing: border-box;
+    display: none;
+}
+
+aside {
+    width: fit-content;
+    background-color: transparent;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    padding-top: 80px;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+aside>.selectedUserInfo {
+    text-align: right;
+    width: fit-content;
+}
+
+aside>.selectedUserInfo>a {
+    font-family: 'inter', sans-serif;
+    color: rgba(21, 37, 54, 1);
+    font-weight: 600;
+    font-size: 20px;
+}
+
+aside>.selectedUserInfo>h1 {
+    font-family: 'inter', sans-serif;
+    color: rgba(21, 37, 54, 1);
+    font-weight: 700;
+    font-size: 40px;
+    margin: 5px 0px 20px 0px;
+    color: rgba(119, 73, 248, 1);
+}
+
+aside>.selectedUserInfo>div {
+    border-radius: 12px;
+    overflow: hidden;
+    width: 300px;
+    height: 295px;
+    border: 1px solid rgba(222, 226, 230, 1);
+}
+
+aside>.selectedUserInfo>div>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#custom-container>div>#blogs-mainTitle {
+    font-family: 'inter', sans-serif;
+    font-weight: 600;
+    font-size: 28px;
+    color: rgba(21, 37, 54, 1);
+    margin: 0px 0px 20px 0px;
+}
+
+#blog {
+    height: fit-content;
+    width: 875px;
+    border-radius: 12px;
+    background-color: rgba(255, 255, 255, 1);
+    border: 1px solid rgba(222, 226, 230, 1);
+    padding: 24px;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+}
+
+#blog>div:first-child {
+    display: flex;
+    margin-bottom: 20px;
+    align-items: end;
+}
+
+#blog>div:first-child>#blogProfileImageDiv {
+    max-width: 90px;
+    min-width: 90px;
+    height: 90px;
+    margin-right: 20px;
+    border-radius: 15px;
+    background-color: gray;
+    overflow: hidden;
+}
+
+#blog>div:first-child>#blogProfileImageDiv>img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#blog>div:first-child>div:nth-child(2)>#blogTitle {
+    width: 325px;
+    color: rgba(33, 37, 41, 1);
+    font-size: 25px;
+    font-weight: 600;
+    font-family: 'inter', sans-serif;
+    margin: 0;
+}
+
+#blog>div:first-child>div:nth-child(2)>#userName-blogDate {
+    width: 325px;
+    color: rgba(108, 117, 125, 1);
+    font-size: 16px;
+    font-weight: 600;
+    font-family: 'inter', sans-serif;
+    margin: 10px 0px 0px 0px;
+}
+
+#blog>#blogDiscription {
+    color: rgba(108, 117, 125, 1);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'inter', sans-serif;
+    margin: 0;
+    line-height: 28px;
+}
+
+#blog>div:nth-of-type(2)>.selectedUserBlogShowBtn {
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+    color: rgba(119, 73, 248, 1);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'inter', sans-serif;
+    margin: 20px 0px 0px 0px;
+    padding: 0px;
+}
+
+@media only screen and (max-width: 1350px) {
+    #custom-container {
+        padding: 0px 20px 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 1230px) {
+    #custom-container {
+        padding: 0px 0px 0px 10%;
+    }
+
+    aside {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        background-color: transparent;
+        position: static;
+        padding-top: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    #custom-container {
+        padding: 0px 0px 0px 20px;
+    }
+}
+
+@media only screen and (max-width: 920px) {
+    #custom-container {
+        padding: 0px 20px 0px 20px;
+    }
+
+    .hdrTopDiv .dashboardBtnStyle,
+    .hdrTopDiv .profileBtnStyle {
+        margin-right: 20px;
+    }
+
+    #blog {
+        width: 100%;
+        padding: 24px;
+    }
+
+}
+
+@media only screen and (max-width: 830px) {
+    .hdrTopDiv>h1 {
+        font-size: 18px;
+    }
+
+    .hdrTopDiv {
+        padding: 0px 10px 0px 10px;
+    }
+
+    header>a {
+        font-size: 25px;
+        margin: 18px 0px 14px 10px;
+    }
+}
